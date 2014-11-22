@@ -163,6 +163,9 @@ class ProjectEndpoint(Endpoint):
     def get(self, project_id):
         return self._get("projects/%s" % project_id)
 
+    def memberships(self, project_id):
+        return self._get("projects/%s/memberships" % project_id)
+
     def all(self):
         return self._get("projects")
 
